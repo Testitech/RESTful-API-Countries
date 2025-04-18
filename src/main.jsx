@@ -19,7 +19,7 @@ const router = createBrowserRouter([
     element: <div>404 Not Found</div>,
   },
   {
-    basename: "/REST-API-Countries",
+    basename: "/RESTful-API-Countries",
   },
 ]);
 
