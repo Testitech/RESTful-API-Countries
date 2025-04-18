@@ -18,6 +18,9 @@ const router = createBrowserRouter([
     path: "*",
     element: <div>404 Not Found</div>,
   },
+  {
+    basename: "/REST-API-Countries",
+  },
 ]);
 
 createRoot(document.getElementById("root")).render(
