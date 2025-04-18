@@ -14,6 +14,10 @@ const router = createBrowserRouter([
     path: "/details/:name", // Dynamic route for country details
     element: <Details />,
   },
+  {
+    path: "*",
+    element: <div>404 Not Found</div>,
+  },
 ]);
 
 createRoot(document.getElementById("root")).render(
