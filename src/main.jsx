@@ -16,7 +16,11 @@ const router = createBrowserRouter([
   },
   {
     path: "*",
-    element: <div>404 Not Found</div>,
+    element: (
+      <div className="flex items-center justify-center h-screen font-[Nunito sans] font-bold">
+        <h1 className="text-4xl">404 Not Found</h1>
+      </div>
+    ),
   },
   {
     basename: "/RESTful-API-Countries",
