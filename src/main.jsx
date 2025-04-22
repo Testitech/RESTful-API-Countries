@@ -5,27 +5,29 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import App from "./App";
 import Details from "./[name]/Details";
 
-const router = createBrowserRouter([
+const router = createBrowserRouter(
+  [
+    {
+      path: "/",
+      element: <App />,
+    },
+    {
+      path: "/details/:name",
+      element: <Details />,
+    },
+    {
+      path: "*",
+      element: (
+        <div className="flex items-center justify-center h-screen font-[Nunito sans] font-bold">
+          <h1 className="text-4xl">404 Not Found</h1>
+        </div>
+      ),
+    },
+  ],
   {
-    path: "/",
-    element: <App />,
-  },
-  {
-    path: "/details/:name", // Dynamic route for country details
-    element: <Details />,
-  },
-  {
-    path: "*",
-    element: (
-      <div className="flex items-center justify-center h-screen font-[Nunito sans] font-bold">
-        <h1 className="text-4xl">404 Not Found</h1>
-      </div>
-    ),
-  },
-  {
-    basename: "/RESTful-API-Countries",
-  },
-]);
+    basename: "/RESTful-API-Countries", // <-- move it here!
+  }
+);
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
