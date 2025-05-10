@@ -14,12 +14,12 @@ export default function Details() {
 
   return (
     <ThemeProvider>
-      <div className="dark:bg-slate-700 md:h-screen min-h-[800px] font-[Nunito sans] overflow-hidden">
+      <div className="dark:bg-slate-700 lg:h-screen md:h-[1320px] min-h-[800px] font-[Nunito sans] overflow-hidden">
         <Header />
 
-        <div className="md:place-content-center">
+        <div className="md:place-content-center bg-gray-200 dark:bg-slate-700">
           <Link to="/">
-            <div className="bg-white dark:bg-slate-700 flex justify-center items-center dark:border-3 border-2 dark:border-slate-800 border-gray-200 shadow-md gap-x-2 lg:mx-24 md:mx-24 mx-6 rounded-md w-28 p-1 mt-[60px]">
+            <div className="bg-white dark:bg-slate-700 flex justify-center items-center dark:border-1 border-1 border-gray-200 shadow-md gap-x-2 lg:mx-24 md:mx-24 mx-6 rounded-md w-28 p-1 mt-[60px]">
               <span className="text-lg text-gray-800 dark:text-slate-100">
                 <FaArrowLeft />
               </span>
@@ -34,13 +34,13 @@ export default function Details() {
               Country not found. Try going back.
             </div>
           ) : (
-            <div className="md:flex md:items-center lg:mx-24 md:mx-24 mx-6 lg:mt-16 md:mt-0 sm:mt-10 mt-10 gap-x-28">
+            <div className="lg:flex  lg:mx-24 md:mx-24 mx-6 lg:mt-16 md:mt-0 sm:mt-10 mt-10 gap-x-28 lg:px-0 md:px-10">
               {/* Flag Section */}
-              <div className="w-[450px] h-[300px] bg-white dark:bg-slate-700 shadow-md">
-                <div className="flex justify-center w-[450px]">
+              <div className="lg:w-[450px] md:w-[450px] w-[390px] h-[300px] lg:h-[300px] bg-gray-200 dark:bg-slate-700 lg:mt-0 md:mt-16">
+                <div className="flex justify-center lg:w-[450px] md:w-[550px] w-[330px]">
                   <img
                     src={countryData.flags?.svg}
-                    className="object-cover w-full h-[300px]"
+                    className="object-cover lg:w-full md:w-full md:h-[450px] lg:h-[350px] h-[300px] mb-4 md:rounded-xl lg:rounded rounded"
                     alt={`Flag of ${countryData.name}`}
                   />
                 </div>
@@ -123,12 +123,14 @@ export default function Details() {
                   <div className="flex flex-wrap gap-2 mt-2">
                     {countryData.borders?.length ? (
                       countryData.borders.map((border, index) => (
-                        <span
-                          key={index}
-                          className="rounded-md text-gray-500 dark:text-slate-100 font-medium p-2 dark:border-0 border-2 dark:border-slate-800 border-gray-200 shadow-md"
-                        >
-                          {border}
-                        </span>
+                        <Link to={`/details/${name}`}>
+                          <span
+                            key={index}
+                            className="rounded-md text-gray-500 dark:text-slate-100 font-medium p-2 dark:border-0 border-2 dark:border-slate-800 border-gray-200 shadow-md"
+                          >
+                            {border}
+                          </span>
+                        </Link>
                       ))
                     ) : (
                       <span className="text-gray-500 dark:text-slate-100 font-medium">

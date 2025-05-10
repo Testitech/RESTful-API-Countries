@@ -34,7 +34,7 @@ const App = () => {
             <CiSearch className="absolute text-xs md:text-lg w-4 h-4 ml-3 pointer-events-none"></CiSearch>
 
             <input
-              className="bg-white dark:bg-slate-500 md:text-sm text-xs p-2 pr-3 pl-10 md:w-[500px] sm:w-[450px] w-full dark:shadow-gray-800 shadow-md rounded border-none  focus:ring-2 focus:ring-gray-400 focus:outline-none"
+              className="bg-white dark:bg-slate-500 md:text-sm text-xs p-2 pr-3 pl-10 md:w-[500px] sm:w-[450px] w-full dark:shadow shadow rounded border-none  focus:ring-2 focus:ring-gray-300 focus:outline-none"
               type="search"
               name="search"
               value={search}
@@ -48,7 +48,7 @@ const App = () => {
 
         <RegionFilter onFilter={setFilteredCountries} />
 
-        <div className="lg:p-20 md:p-20 sm:p-15 p-20 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-10 w-full h-full">
+        <div className="2xl:p-20 lg:p-20 md:p-20 p-10 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 2xl:grid-cols-4 lg:grid-cols-3 gap-10 w-full h-full">
           {filteredCountries.slice(0, 100).map((countryData, index) => (
             <Cards
               key={index}

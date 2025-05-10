@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 export default function Cards({ flag, name, population, capital, region }) {
   return (
     <>
-      <div className="flex flex-col lg:w-[260px] md:w-[210px] w-full mb-9 md:mb-0 bg-white dark:bg-slate-700 rounded-lg font-[Nunito sans] cursor-pointer hover:shadow-md">
+      <div className="flex flex-col lg:w-[300px] md:w-[300px] w-full mb-9 md:mb-0 bg-white dark:bg-slate-700 rounded-lg font-[Nunito sans] cursor-pointer hover:shadow-md">
         <Link to={`/details/${name}`}>
           <div className="">
             <div className="w-full h-48">

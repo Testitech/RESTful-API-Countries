@@ -25,7 +25,7 @@ const router = createBrowserRouter(
     },
   ],
   {
-    basename: "/RESTful-API-Countries", // <-- move it here!
+    basename: "/RESTful-API-Countries",
   }
 );
 

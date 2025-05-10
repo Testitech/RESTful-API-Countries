@@ -29,9 +29,14 @@ export default function RegionFilter({ onFilter }) {
       <select
         value={selectedRegion}
         onChange={(e) => filteredRegion(e.target.value)}
-        className="absolute hover:bg-gray-100 dark:hover:bg-slate-500 lg:left-[1100px] md:left-22 left-6 lg:top-5 top-16 p-2 rounded dark:text-white bg-white dark:bg-slate-700 cursor-pointer outline-0 focus-within:outline-0"
+        className="absolute hover:bg-gray-100 dark:hover:bg-slate-500 lg:left-[1100px] md:left-22 left-6 lg:top-5 top-16 p-2 rounded dark:text-white text-black bg-white dark:bg-slate-700 cursor-pointer outline-0 focus-within:outline-0"
       >
-        <option value="" disabled hidden>
+        <option
+          className="text-black dark:text-white font-[Nunito sans] font-bold"
+          value=""
+          disabled
+          hidden
+        >
           Filter by Region
         </option>
         {regions.map((region) => (
