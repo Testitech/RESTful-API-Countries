@@ -123,14 +123,12 @@ export default function Details() {
                   <div className="flex flex-wrap gap-2 mt-2">
                     {countryData.borders?.length ? (
                       countryData.borders.map((border, index) => (
-                        <Link to={`/details/${name}`}>
-                          <span
-                            key={index}
-                            className="rounded-md text-gray-500 dark:text-slate-100 font-medium p-2 dark:border-0 border-2 dark:border-slate-800 border-gray-200 shadow-md"
-                          >
-                            {border}
-                          </span>
-                        </Link>
+                        <span
+                          key={index}
+                          className="cursor-pointer rounded-md text-gray-500 dark:text-slate-100 font-medium p-2 dark:border-0 border-2 dark:border-slate-800 border-gray-200 shadow-md"
+                        >
+                          {border}
+                        </span>
                       ))
                     ) : (
                       <span className="text-gray-500 dark:text-slate-100 font-medium">
